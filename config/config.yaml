@@ -1,0 +1,18 @@
+completion:
+  encoding: cl100k_base
+  kwargs:
+    engine: text-babbage-001
+    temperature: 0.7
+    max_tokens: 100
+    top_p: 1
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+chatCompletion:
+  encoding: cl100k_base
+  kwargs:
+    model: gpt-3.5-turbo
+    temperature: 0.8
+    max_tokens: 1000
+    n: 1
+    stop: null
+  
