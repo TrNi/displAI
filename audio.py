@@ -6,12 +6,11 @@ from playsound import playsound
 import OAIWrapper
 
 oai = OAIWrapper.OAIWrapper()
-KEYWORD = "display"
 
 def callback(recognizer, audio):
     try:
         print("Starting transcription...")
-        text = recognizer.recognize_whisper(audio, model = "tiny.en")
+        text = recognizer.recognize_whisper(audio, model = "small.en")
         print(f"Recognized: {text}")
 
         chatgpt_result = oai.chat_completion("Pretend being a very cool dude, use a lot of slangs and short anwsers for this in portuguese: " + text)

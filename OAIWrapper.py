@@ -35,7 +35,7 @@ class OAIWrapper():
         except Exception as e:
             logging.error("Error loading config file %s: %s", config_file, e)
 
-    def _get_token_count(self, prompt: str, kind: str) -> int:
+    def get_token_count(self, prompt: str, kind: str) -> int:
         """Returns the number of tokens in a text string."""
         if kind == "completion":
             n_tokens = self.completion_encoding.encode(prompt)
@@ -65,7 +65,7 @@ class OAIWrapper():
         # Try to count tokens before calling the API
         try:
             if countTokens:
-                tokens = self._get_token_count(prompt, kind)
+                tokens = self.get_token_count(prompt, kind)
                 logging.info("Num tokens: %s", tokens)
                 if tokens > max_tokens:
                     logging.error(f"Too many tokens: {tokens}")
