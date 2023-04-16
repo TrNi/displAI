@@ -15,12 +15,12 @@ def stringToRGB(base64_string):
 
 PROMPT = "An eco-friendly computer from the 90s in the style of vaporwave"
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+#openai.api_key = os.getenv("OPENAI_API_KEY")
 
 response = openai.Image.create(
     prompt=PROMPT,
     n=1,
-    size="512x512",
+    size="1024x1024",
     response_format="b64_json",
 )
 
