@@ -2,11 +2,10 @@ import speech_recognition as srlib
 import os
 import OAIWrapper
 from openai import Image as im
-import base64
-from PIL import Image
 import cv2
 import gtts
-from playsound import playsound
+from pydub import AudioSegment
+from pydub.playback import play
 from utils.imgutils import strtoimg
 
 ow = OAIWrapper.OAIWrapper()
@@ -37,13 +36,13 @@ while True:
             gptprm = f"A person is suggesting or requesting a creative image. Understand the gist of the next sentence"+\
             f"and give a realistic, one-line visual description of the scene fitting for it in less than twenty words. {rcmd}"
 
-            imgprm = f"A real image of {ow.chat_completion(gptprm)}"
+            imgprm = f"A photo of {ow.chat_completion(gptprm)}"
             imgprmplus = f"Image prompt: "+imgprm
             imgprmplus = imgprmplus.replace('"','').replace("'",'')
             print(imgprmplus)
             imgprmaud = gtts.gTTS(imgprmplus)
             audpath = os.path.join(os.path.relpath("imgprompt.mp3"))
-            imgprmaud.save(audpath);#playsound(audpath)
+            imgprmaud.save(audpath);play(AudioSegment.from_file(audpath, format="mp3"))
             vres = im.create(prompt=imgprm, n=2, size="512x512", response_format="b64_json")
 
             for id, imdict in enumerate(vres["data"]):
