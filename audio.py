@@ -100,7 +100,7 @@ def get_context(msg):
     similarities = []
     msg_emb = get_embedding(msg.strip(user_name).strip("sophia"))
     for emb, msg in zip(history_embeddings, history):
-        similarities += [(similarity(emb, msg_emb.strip(user_name).strip("sophia")), msg)]
+        similarities += [(similarity(emb, msg_emb), msg)]
     similarities.sort()
     context = []
     for sim, msg in reversed(similarities):
@@ -121,15 +121,14 @@ def callback(recognizer, audio):
         print(conversation)
         print("Starting transcription...")
         app.show_gif(4)
-        user_text = recognizer.recognize_whisper(audio, model = "base.en")
+        user_text = recognizer.recognize_whisper(audio, model = "tiny.en")
         print(f"Recognized: {user_text}")
 
-        if user_text:
+        if user_text and user_text != "you" and user_text != "Thanks for watching!":
             if ("sophia" in user_text.lower() or "sofia" in user_text.lower()):
                 sophia_awake = True
                 sophia_time = time.time()
-            elif sophia_awake and time.time() - sophia_time < 20:
-                print(time.time() - sophia_time)
+            elif sophia_awake and time.time() - sophia_time < 60:
                 sophia_time = time.time()
             else:
                 sophia_awake = False
@@ -167,8 +166,8 @@ def main():
     mic = sr.Microphone()
     with mic as source:
         r.adjust_for_ambient_noise(source)
-    r.pause_threshold = 1
-    r.operation_timeout = 0.7
+    r.pause_threshold = 0.7
+    r.operation_timeout = 0.5
     r.dynamic_energy_threshold = True
 
     processThread = threading.Thread(target=update_history)
@@ -179,10 +178,10 @@ def main():
             app.show_gif(0)
         else:
             app.show_gif(2)
-        print("Listening...")
         with mic as source:
-            audio = r.listen(source, timeout=3)
-        print("Listened")
+            print("Listening...")
+            audio = r.listen(source, timeout=10)
+            print("Listened")
         callback(r, audio)
 
 if __name__ == "__main__":
