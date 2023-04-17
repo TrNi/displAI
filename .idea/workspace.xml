@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65e4255d-072f-48e9-9474-bf5fb7d815af" name="Changes" comment="added Ni branch">
-      <change afterPath="$PROJECT_DIR$/.idea/displAI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/displai1/displai1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yourtext.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/imgutils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OAIWrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/OAIWrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/displai1/displai1.py" beforeDir="false" afterPath="$PROJECT_DIR$/displai1/displai1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scratch_audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch_audio.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681074620984</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added Ni branch">
+      <created>1681674032762</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681674032762</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

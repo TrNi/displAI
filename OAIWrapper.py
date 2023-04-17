@@ -3,16 +3,15 @@ import logging
 import openai
 import tiktoken
 import yaml
-
-
+import os
 # Set logging level
 logging.basicConfig(level=logging.INFO)
-
+cfg = os.path.join(os.path.dirname(__file__), "config","config.yaml")
 
 class OAIWrapper():
     """OpenAI wrapper."""
 
-    def __init__(self, config_file="config/config.yaml"):
+    def __init__(self, config_file=cfg):
         """Initialize the wrapper."""
         self.__last_response = None
 
@@ -26,7 +25,7 @@ class OAIWrapper():
             self.chat_completion_config["encoding"]
         )
 
-    def _load_config_from_file(self, config_file: str = "config/config.yaml"):
+    def _load_config_from_file(self, config_file: str = cfg):
         """Load default config for completion and chatCompletion, from yaml files."""
         try:
             with open(config_file, "r") as f:

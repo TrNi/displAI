@@ -20,7 +20,7 @@ while True:
         audio = r.listen(source, phrase_time_limit=5)
 
     try:
-        # Use the Google Web Speech API to transcribe the audio
+        # transcribe the audio
         text = r.recognize_whisper(audio,model='tiny.en')
 
         # Check if any of the keywords are in the transcribed text
@@ -28,9 +28,9 @@ while True:
             if keyword in text:
                 print("Keyword detected:", keyword)
                 break
-        else:
-            print()
-            print(f"No keywords detected, you said {text} .")
+        # else:
+        #     print()
+        #     print(f"No keywords detected, you said {text} .")
 
         cv=cv+"I: " + text + "."
         gptsaid = oaw.chat_completion(f"Pretend to be an angry Karen using slangs & demanding to talk with my manager to return her product. Say the next short line in this conversation in less than 20 words: {cv}").strip("Karen")
@@ -42,6 +42,6 @@ while True:
         cv = cv + "Karen: " + gptsaid + "."
 
     except sr.UnknownValueError:
-        print("Google Speech Recognition could not understand audio")
+        print("The Speech Recognition could not understand audio")
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
