@@ -1,7 +1,9 @@
+import audioop
+import pyaudio
 import speech_recognition as sr
 import gtts
 from playsound import playsound
-from utils import OAIWrapper
+import OAIWrapper
 import openai
 from threading import Thread
 import time
@@ -10,6 +12,9 @@ from PIL import Image, ImageTk
 from multiprocessing import Process, Value
 import threading
 import numpy as np
+
+def print(msg):
+    pass
 
 class GifViewer(threading.Thread):
     def __init__(self, gif_files):
@@ -68,7 +73,7 @@ gif_files = ["gifs/listening.gif", "gifs/transcripting.gif", "gifs/thinking.gif"
 
 oai = OAIWrapper.OAIWrapper()
 
-user_name = "vanderson"
+user_name = "sophia"
 
 history_embeddings = []
 history = []
@@ -88,7 +93,9 @@ def update_history():
     while True:
         time.sleep(30)
         for i in range(len(conversation)):
+            print(i)
             if i > 10:
+                print("Starting processing conversation:")
                 old_conversation = conversation[0:i]
                 history += old_conversation
                 history_embeddings += [get_embedding(msg) for msg in old_conversation]
@@ -98,8 +105,10 @@ def update_history():
 def get_context(msg):
     global history_embeddings, history
     similarities = []
-    msg_emb = get_embedding(msg.strip(user_name).strip("sophia"))
+    msg_emb = get_embedding(msg)
     for emb, msg in zip(history_embeddings, history):
+        print(emb)
+        print(msg_emb)
         similarities += [(similarity(emb, msg_emb), msg)]
     similarities.sort()
     context = []
@@ -107,6 +116,7 @@ def get_context(msg):
         context += [msg]
         if len(context) > 5:
             break
+    print(similarities)
     return context
 
 sophia_awake = False
@@ -121,27 +131,26 @@ def callback(recognizer, audio):
         print(conversation)
         print("Starting transcription...")
         app.show_gif(4)
-        user_text = recognizer.recognize_whisper(audio, model = "tiny.en")
+        user_text = recognizer.recognize_whisper(audio, model = "base.en")
         print(f"Recognized: {user_text}")
 
-        if user_text and user_text != "you" and user_text != "Thanks for watching!":
+        if user_text:
             if ("sophia" in user_text.lower() or "sofia" in user_text.lower()):
                 sophia_awake = True
                 sophia_time = time.time()
-            elif sophia_awake and time.time() - sophia_time < 60:
+            elif sophia_awake and time.time() - sophia_time < 30000:
                 sophia_time = time.time()
             else:
                 sophia_awake = False
-                app.show_gif(2)
                 return
 
             user_text = user_text.strip()
-            conversation += [user_name + ": " + user_text.strip("sophia:")]
-            context = get_context(user_text.strip("sophia:"))
+            conversation += [user_name + ": " + user_text.strip("hey sophia")]
+            context = get_context(user_text.strip("hey sophia"))
             print("Context: ")
             print(context)
 
-            prompt = "You are Sophia, a very smart AI. Be very friendly and create the next awnser from Sophia to " + user_name + " for this conversation: \n" + '\n'.join(context) + '\n'.join(conversation)
+            prompt = "You are Sophia, a very smart girl. Be very friendly and create the next awnser from Sophia to " + user_name + " for this conversation: \n" + '\n'.join(context) + '\n'.join(conversation)
             print(prompt)
             chatgpt_text = oai.chat_completion(prompt = prompt)
             chatgpt_text = chatgpt_text.strip("sophia:").strip("Sophia:").split('\n')[0]
@@ -161,27 +170,24 @@ def callback(recognizer, audio):
 app = GifViewer(gif_files)
 
 def main():
-    global sophia_awake
     r = sr.Recognizer()
     mic = sr.Microphone()
     with mic as source:
         r.adjust_for_ambient_noise(source)
     r.pause_threshold = 0.7
     r.operation_timeout = 0.5
-    r.dynamic_energy_threshold = True
+    r.dynamic_energy_threshold = False
 
     processThread = threading.Thread(target=update_history)
     processThread.start()
+    print(get_embedding("ola mundo"))
 
     while True:
-        if sophia_awake:
-            app.show_gif(0)
-        else:
-            app.show_gif(2)
+        app.show_gif(0)
+        print("Listening...")
         with mic as source:
-            print("Listening...")
-            audio = r.listen(source, timeout=10)
-            print("Listened")
+            audio = r.listen(source)
+        print("Listened")
         callback(r, audio)
 
 if __name__ == "__main__":
