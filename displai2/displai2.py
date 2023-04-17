@@ -73,12 +73,12 @@ def disp_occ(q): #display occasionally, based on conversation.
         cnvr, nametry, botname, usrname= q.get()
         if cnvr is not None:
             linecnt = cnvr.count('\n')
-            if linecnt>lastcnt+5:
+            if linecnt>lastcnt+8:
                 lastcnt = linecnt
                 ls = list(m.start() for m in re.finditer('\n', cnvr))
                 startid = ls[-5]+1
-                gptprm = f"You are an intelligent AI chatbot named {botname} conversing with a human named {usrname}.Understand the gist of this conversation " + \
-                         f"and give a realistic, one-line visual description of the scene fitting for it in less than twenty words. Conversation: {cnvr[startid:]}"
+                gptprm = f"Two humans named {botname} and {usrname} are conversing. Understand the gist of this conversation " + \
+                         f"and give a realistic, one-line visual description of the scene fitting for the topic of conversation in less than twenty words. Conversation: {cnvr[startid:]}"
 
                 imgprm = f"A photo of {ow.chat_completion(gptprm)}"
                 imgprmplus = f"Image prompt: " + imgprm

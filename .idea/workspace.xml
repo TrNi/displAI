@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65e4255d-072f-48e9-9474-bf5fb7d815af" name="Changes" comment="Displai_part2_in_progress_please_use_utility_functions.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="65e4255d-072f-48e9-9474-bf5fb7d815af" name="Changes" comment="Displai_part2_complete_please_use_utility_functions.Parallel_audio_and_visual_pipeline.">
       <change beforePath="$PROJECT_DIR$/displai2/displai2.py" beforeDir="false" afterPath="$PROJECT_DIR$/displai2/displai2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681702806765</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Displai_part2_complete_please_use_utility_functions.Parallel_audio_and_visual_pipeline.">
+      <created>1681707947296</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681707947296</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +170,7 @@
     <MESSAGE value="added Ni branch" />
     <MESSAGE value="Displai_part1_complete_listen_detect_show." />
     <MESSAGE value="Displai_part2_in_progress_please_use_utility_functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Displai_part2_in_progress_please_use_utility_functions." />
+    <MESSAGE value="Displai_part2_complete_please_use_utility_functions.Parallel_audio_and_visual_pipeline." />
+    <option name="LAST_COMMIT_MESSAGE" value="Displai_part2_complete_please_use_utility_functions.Parallel_audio_and_visual_pipeline." />
   </component>
 </project>
