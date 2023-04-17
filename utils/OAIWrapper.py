@@ -6,7 +6,7 @@ import yaml
 import os
 # Set logging level
 logging.basicConfig(level=logging.INFO)
-cfg = os.path.join(os.path.dirname(__file__), "config","config.yaml")
+cfg = os.path.join(os.path.dirname(__file__), "../config", "config.yaml")
 
 class OAIWrapper():
     """OpenAI wrapper."""

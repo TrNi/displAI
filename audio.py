@@ -1,9 +1,7 @@
-import audioop
-import pyaudio
 import speech_recognition as sr
 import gtts
 from playsound import playsound
-import OAIWrapper
+from utils import OAIWrapper
 import openai
 from threading import Thread
 import time

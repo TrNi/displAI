@@ -1,7 +1,6 @@
 import openai
 from PIL import Image
 import cv2
-import os
 import base64
 import io
 import numpy

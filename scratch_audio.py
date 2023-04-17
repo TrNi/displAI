@@ -2,7 +2,7 @@ import speech_recognition as sr
 import gtts
 from playsound import playsound
 import os
-import OAIWrapper as ow
+from utils import OAIWrapper as ow
 
 oaw = ow.OAIWrapper()
 
