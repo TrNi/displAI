@@ -11,23 +11,26 @@ import gtts
 from pydub import AudioSegment
 from pydub.playback import play
 from utils.imgutils import strtoimg
-import multiprocessing
+from multiprocessing import Process, cpu_count, Queue as Q
+
 from utils.audutils import *
+import re
 ow = OAIWrapper.OAIWrapper()
 sr = srlib.Recognizer()
 mic = srlib.Microphone()
 with mic as src:
     sr.adjust_for_ambient_noise(src)
 
-cnt = multiprocessing.cpu_count()
+cnt = cpu_count()
 print(f"Parallel processing on up to {cnt} CPU cores.")
 keywords = ["Hey","Hello","Hi"]
 cnvr = None
 nametry=0
 botname = "Jolly"
 usrname = None
-def converse():
-    global cnvr,nametry, usrname
+linecnt = 0
+def converse(q):
+    cnvr, nametry, botname, usrname = q.get()
 
     while True:
         if cnvr is None and nametry==0:
@@ -59,49 +62,47 @@ def converse():
 
         txt = parser_wo_detect(raud)
         cnvr = cnvr + f'\n {"" if usrname is None else usrname}: {txt}'
+        q.put((cnvr, nametry, botname, usrname))
+        #cnvr, nametry, botname, usrname, linecnt = q.get()
 
-converse()
+
+def disp_occ(q): #display occasionally, based on conversation.
+    cnvr, nametry, botname, usrname = q.get()
+    lastcnt = 0 if cnvr is None else cnvr.count('\n')
+    while True:
+        cnvr, nametry, botname, usrname= q.get()
+        if cnvr is not None:
+            linecnt = cnvr.count('\n')
+            if linecnt>lastcnt+5:
+                lastcnt = linecnt
+                ls = list(m.start() for m in re.finditer('\n', cnvr))
+                startid = ls[-5]+1
+                gptprm = f"You are an intelligent AI chatbot named {botname} conversing with a human named {usrname}.Understand the gist of this conversation " + \
+                         f"and give a realistic, one-line visual description of the scene fitting for it in less than twenty words. Conversation: {cnvr[startid:]}"
+
+                imgprm = f"A photo of {ow.chat_completion(gptprm)}"
+                imgprmplus = f"Image prompt: " + imgprm
+                imgprmplus = imgprmplus.replace('"', '').replace("'", '')
+                print(imgprmplus)
+                #playaud(imgprm,"imgprompt.mp3")
+                vres = im.create(prompt=imgprm, n=2, size="512x512", response_format="b64_json")
+
+                for id, imdict in enumerate(vres["data"]):
+                    imdata = strtoimg(imdict["b64_json"])
+                    cv2.imshow(f'im{id}', imdata)
+                    cv2.moveWindow(f'im{id}', id * 512 + 5, id * 0 * 128 + 1)
+                    cv2.setWindowProperty(f'im{id}', cv2.WND_PROP_TOPMOST, 1)
+                cv2.waitKey(0)
+                cv2.destroyAllWindows()
 
 
 
-while True:
-    with srlib.Microphone() as source: #default microphone
-        print("Say something!")
-        raud = sr.listen(source, phrase_time_limit=8) # received audio
-
-    try:
-        rtxt = sr.recognize_whisper(raud, model='tiny.en') #Whisper API for audio transcription.
-        kw_det = False
-        for kw in keywords:
-            if kw.casefold() in rtxt.casefold():
-                kw_det = True #keyword detected.
-                rcmd = rtxt.casefold().strip(kw.casefold()) #received command
-                print(f"Keyword detected:{kw}, processing:{rcmd}")
-                break
-        if kw_det:
-            #image prompt using chatgpt:
-            gptprm = f"A person is suggesting or requesting a creative image. Understand the gist of the next sentence"+\
-            f"and give a realistic, one-line visual description of the scene fitting for it in less than twenty words. {rcmd}"
-
-            imgprm = f"A photo of {ow.chat_completion(gptprm)}"
-            imgprmplus = f"Image prompt: "+imgprm
-            imgprmplus = imgprmplus.replace('"','').replace("'",'')
-            print(imgprmplus)
-            imgprmaud = gtts.gTTS(imgprmplus)
-            audpath = os.path.join(os.path.relpath("imgprompt.mp3"))
-            imgprmaud.save(audpath);play(AudioSegment.from_file(audpath, format="mp3"))
-            vres = im.create(prompt=imgprm, n=2, size="512x512", response_format="b64_json")
-
-            for id, imdict in enumerate(vres["data"]):
-                imdata= strtoimg(imdict["b64_json"])
-                cv2.imshow(f'im{id}', imdata)
-                cv2.moveWindow(f'im{id}',id*512+5, id*0*128+1)
-                cv2.setWindowProperty(f'im{id}', cv2.WND_PROP_TOPMOST, 1)
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
-
-    except srlib.UnknownValueError:
-        print("Could not understand audio, please say again.")
-
-    except srlib.RequestError as e:
-        print("Could not request audio transcription ")
+if __name__=='__main__':
+    q = Q()
+    q.put((cnvr,nametry,botname,usrname))
+    pr1 = Process(target=converse, args=(q,))
+    pr2 = Process(target=disp_occ, args=(q,))
+    pr1.start()
+    pr2.start()
+    pr1.join()
+    pr2.join()
