@@ -49,15 +49,17 @@ class ChatBot:
             return True
         return False
 
-    def _save_conversation(self):
-        pass
+    def _update_history(self):
+        if len(self.conversation) > 10:
+            self.conversation_to_save = self.conversation[:10]
+            self.conversation = self.conversation[10:]
+            self.historyDB.add_to_history(self.conversation_to_save)
 
     def add_user_msg(self, user_name, user_text):
         if user_text:
             user_text = user_text.strip()
             self.conversation += [user_name + ": " + user_text.strip(self.bot_name+':')]
             self._awake()
-            self._save_conversation()
 
     def get_and_save_bot_next_msg(self, context_window = 10):
         context = self.historyDB.get_similar_msgs(self.conversation[-1], context_window)
@@ -66,5 +68,5 @@ class ChatBot:
         chatgpt_text = self.oai.chat_completion(prompt = prompt).lower().strip(self.bot_name+":").split('\n')[0]
         self.conversation += [self.bot_name+": " + chatgpt_text]
         self._awake()
-        self._save_conversation()
+        self._update_history()
         return chatgpt_text
