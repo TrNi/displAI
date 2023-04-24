@@ -4,14 +4,15 @@ from pydub import AudioSegment
 from pydub.playback import play
 import os
 
+
 class AudioHelper:
     def __init__(self):
-        self.r   = sr.Recognizer()
+        self.r = sr.Recognizer()
         self.mic = sr.Microphone()
         with self.mic as source:
             self.r.adjust_for_ambient_noise(source)
-        #r.pause_threshold = 0.7
-        #r.operation_timeout = 0.5
+        # r.pause_threshold = 0.7
+        # r.operation_timeout = 0.5
         self.r.dynamic_energy_threshold = True
 
     def listen(self):
@@ -40,9 +41,9 @@ class AudioHelper:
                     print(f"Keyword detected:{kw}, processing:{rcmd}")
                     break
             if kw_det:
-                return kw_det,rtxt,rcmd
+                return kw_det, rtxt, rcmd
             else:
-                return False,rtxt,None
+                return False, rtxt, None
 
         except sr.UnknownValueError:
             print("Could not understand audio, please say again.")
@@ -50,8 +51,10 @@ class AudioHelper:
         except sr.RequestError as e:
             print("Could not request audio transcription ")
 
-    def say(self, txt, lang = "en", accent = "us", path=''):
-        aud = gtts.gTTS(txt, lang = lang, tld = accent)
-        audpath = os.path.join(os.path.dirname(__file__), 'tempaud.mp3' if path == '' else path)
+    def say(self, txt, lang="en", accent="us", path=''):
+        aud = gtts.gTTS(txt, lang=lang, tld=accent)
+        audpath = os.path.join(
+            os.path.dirname(__file__),
+            'tempaud.mp3' if path == '' else path)
         aud.save(audpath)
         play(AudioSegment.from_file(audpath, format="mp3"))

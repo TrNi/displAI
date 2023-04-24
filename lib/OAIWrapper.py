@@ -8,6 +8,7 @@ import os
 logging.basicConfig(level=logging.INFO)
 cfg = os.path.join(os.path.dirname(__file__), "../config", "config.yaml")
 
+
 class OAIWrapper():
     """OpenAI wrapper."""
 
@@ -44,9 +45,14 @@ class OAIWrapper():
         logging.debug("tokens: (%s) %s", len(n_tokens), n_tokens)
         return len(n_tokens)
 
-    def _call(self, prompt, kind: str = "completion", countTokens: bool = True) -> str:
+    def _call(
+            self,
+            prompt,
+            kind: str = "completion",
+            countTokens: bool = True) -> str:
         """Call the OpenAI API based on kind."""
-        assert kind in ["completion", "chatCompletion"], f"Invalid kind: {kind}"
+        assert kind in [
+            "completion", "chatCompletion"], f"Invalid kind: {kind}"
 
         if kind == "completion":
             kwargs = self.completion_config["kwargs"]

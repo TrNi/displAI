@@ -4,19 +4,24 @@ from lib.audutils import AudioHelper
 import threading
 import cv2
 
+
 def log(msg):
     print(msg)
+
 
 def is_valid_msg(msg):
     return msg and msg.strip(" ") != "you" and msg != "Thanks for watching!"
 
+
 def has_keyword_sophia(msg):
     return "sophia" in msg.lower() or "sofia" in msg.lower()
+
 
 def update_image(sophia_bot, gif_window):
     image = sophia_bot.gen_image_from_conversation()
     cv2.imwrite("image.png", image)
     gif_window.show_image("image.png")
+
 
 def main():
     gif_window = Viewer()
@@ -50,7 +55,9 @@ def main():
 
                     if i % 2 == 0:
                         log("Generating new image")
-                        threading.Thread(target=update_image, args=(sophia_bot, gif_window,)).start()
+                        threading.Thread(
+                            target=update_image, args=(
+                                sophia_bot, gif_window,)).start()
 
                     gif_window.change_state("saying")
                     log(f"Saying: {chatgpt_text}")
@@ -60,6 +67,7 @@ def main():
 
         except Exception as e:
             log(f"Failed: {e}")
+
 
 if __name__ == "__main__":
     main()

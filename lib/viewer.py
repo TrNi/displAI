@@ -5,7 +5,12 @@ from enum import Enum
 from PIL import Image, ImageTk
 
 class Viewer(threading.Thread):
-    gif_files = ["gifs/listening.gif", "gifs/transcripting.gif", "gifs/thinking.gif", "gifs/speaking.gif", "gifs/starting.gif"]
+    gif_files = [
+        "gifs/listening.gif",
+        "gifs/transcripting.gif",
+        "gifs/thinking.gif",
+        "gifs/speaking.gif",
+        "gifs/starting.gif"]
 
     def __init__(self):
         threading.Thread.__init__(self)
@@ -17,9 +22,10 @@ class Viewer(threading.Thread):
         self.current_gif = 0
 
         self.tk.title("GIF Viewer")
-        self.tk.geometry("{0}x{1}+0+0".format(self.tk.winfo_screenwidth(), self.tk.winfo_screenheight()))
+        self.tk.geometry(
+            "{0}x{1}+0+0".format(self.tk.winfo_screenwidth(), self.tk.winfo_screenheight()))
         self.tk.configure(background='black')
-        self.tk.attributes('-fullscreen',True)
+        self.tk.attributes('-fullscreen', True)
 
         self.tk.label2 = tk.Label(self.tk)
         self.tk.label = tk.Label(self.tk)
@@ -39,7 +45,10 @@ class Viewer(threading.Thread):
         screen_height = self.tk.winfo_screenheight()
 
         # Resize the image to fullscreen
-        img = img.resize((3*screen_width//5, 3*screen_height//5), Image.ANTIALIAS)
+        img = img.resize(
+            (3 * screen_width // 5,
+             3 * screen_height // 5),
+            Image.ANTIALIAS)
 
         # Convert the image to a PhotoImage object
         photo_image = ImageTk.PhotoImage(img)
@@ -79,7 +88,7 @@ class Viewer(threading.Thread):
         self.tk.after(100, self.show)
 
     def change_state(self, state):
-        if   state == "sleep":
+        if state == "sleep":
             self.show_gif(2)
         elif state == "awake":
             self.show_gif(0)

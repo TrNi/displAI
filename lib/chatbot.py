@@ -5,6 +5,7 @@ import time
 from openai import Image as im
 import numpy as np
 
+
 class ConversationDB:
     history_embeddings = []
     history = []
@@ -20,7 +21,8 @@ class ConversationDB:
 
     def add_to_history(self, conversation):
         self.history += conversation
-        self.history_embeddings += [self._get_embedding(msg) for msg in conversation]
+        self.history_embeddings += [self._get_embedding(msg)
+                                    for msg in conversation]
 
     def get_similar_msgs(self, msg, number_of_msgs):
         similarities = []
@@ -35,15 +37,17 @@ class ConversationDB:
                 break
         return context
 
+
 class ChatBot:
-    def __init__(self, bot_name, history_file = None):
+    def __init__(self, bot_name, history_file=None):
         self.oai = OAIWrapper()
         self.bot_name = bot_name
         self.historyDB = ConversationDB()
         self.conversation = []
         self.bot_last_awake = 0
 
-    def gen_image_from_conversation(self): #display occasionally, based on conversation.
+    # display occasionally, based on conversation.
+    def gen_image_from_conversation(self):
         if len(self.conversation) > 0:
             cnvr = '\n'.join(self.conversation)
             gptprm = f"Understand the gist of this conversation " + \
@@ -51,7 +55,11 @@ class ChatBot:
             imgprm = f"A photo of {self.oai.chat_completion(gptprm)}"
             imgprmplus = f"Image prompt: " + imgprm
             imgprmplus = imgprmplus.replace('"', '').replace("'", '')
-            vres = im.create(prompt=imgprm, n=1, size="256x256", response_format="b64_json")
+            vres = im.create(
+                prompt=imgprm,
+                n=1,
+                size="256x256",
+                response_format="b64_json")
             return strtoimg(vres["data"][0]["b64_json"])
 
     def _awake(self):
@@ -72,15 +80,19 @@ class ChatBot:
     def add_user_msg(self, user_name, user_text):
         if user_text:
             user_text = user_text.strip()
-            self.conversation += [user_name + ": " + user_text.strip(self.bot_name+':')]
+            self.conversation += [user_name + ": " +
+                                  user_text.strip(self.bot_name + ':')]
             self._awake()
 
-    def get_and_save_bot_next_msg(self, context_window = 10):
-        context = self.historyDB.get_similar_msgs(self.conversation[-1], context_window)
+    def get_and_save_bot_next_msg(self, context_window=10):
+        context = self.historyDB.get_similar_msgs(
+            self.conversation[-1], context_window)
         full_conversation = '\n'.join(context) + '\n'.join(self.conversation)
         prompt = f"""You are {self.bot_name}, a bot chat that speaks English. Create the next line/awnser that follows for this conversation: {full_conversation}"""
-        chatgpt_text = self.oai.chat_completion(prompt = prompt).lower().strip(self.bot_name+":").split('\n')[0]
-        self.conversation += [self.bot_name+": " + chatgpt_text]
+        chatgpt_text = self.oai.chat_completion(
+            prompt=prompt).lower().strip(
+            self.bot_name + ":").split('\n')[0]
+        self.conversation += [self.bot_name + ": " + chatgpt_text]
         self._awake()
         self._update_history()
         return chatgpt_text
