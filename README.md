@@ -2,10 +2,6 @@
 
 DisplAI is an interactive, multimedia chatbot that leverages OpenAI's GPT, DALL-E, Whisper, and GTTS to create an engaging and immersive user experience. The chatbot listens to user input, transcribes it, generates appropriate responses, and creates images to visually represent the conversation. This repository contains the source code and an example script for implementing and using the DisplAI chatbot.
 
-## Project Idea
-
-The main goal of this project is to create an intelligent and interactive chatbot that combines multiple AI technologies to deliver a unique and engaging user experience. By integrating GPT for natural language understanding, DALL-E for image generation, Whisper for speech recognition, and GTTS for text-to-speech capabilities, the chatbot provides an immersive experience for users to interact with the AI in a seamless manner.
-
 ## Library
 
 The DisplAI library consists of several modules:
@@ -33,6 +29,14 @@ audio_helper = AudioHelper()
 ```
 
 Once you have instantiated these classes, you can use their methods to handle user input, generate chatbot responses, and display images based on the conversation.
+
+### Run Sophia example
+
+```bash
+python sophia.py
+```
+
+and say: ```hi sophia, how are you?```
 
 ## Getting Started
 ### Prerequisites
