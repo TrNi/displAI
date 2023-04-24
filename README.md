@@ -22,7 +22,7 @@ To use DisplAI in your own projects, simply import the necessary modules and cla
 
 For example:
 
-'''
+```
 python
 
 from lib.viewer import Viewer
@@ -32,6 +32,6 @@ from lib.audutils import AudioHelper
 viewer = Viewer()
 chatbot = ChatBot("sophia")
 audio_helper = AudioHelper()
-'''
+```
 
 Once you have instantiated these classes, you can use their methods to handle user input, generate chatbot responses, and display images based on the conversation.
