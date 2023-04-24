@@ -23,8 +23,6 @@ To use DisplAI in your own projects, simply import the necessary modules and cla
 For example:
 
 ```
-python
-
 from lib.viewer import Viewer
 from lib.chatbot import ChatBot
 from lib.audutils import AudioHelper
