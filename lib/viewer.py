@@ -4,7 +4,7 @@ import threading
 from enum import Enum
 from PIL import Image, ImageTk
 
-class GifViewer(threading.Thread):
+class Viewer(threading.Thread):
     gif_files = ["gifs/listening.gif", "gifs/transcripting.gif", "gifs/thinking.gif", "gifs/speaking.gif", "gifs/starting.gif"]
 
     def __init__(self):
