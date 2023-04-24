@@ -22,7 +22,7 @@ To use DisplAI in your own projects, simply import the necessary modules and cla
 
 For example:
 
-```
+```python
 from lib.viewer import Viewer
 from lib.chatbot import ChatBot
 from lib.audutils import AudioHelper
@@ -57,7 +57,7 @@ To use DisplAI, you will need the following dependencies:
 
 To install the required dependencies, run the following command:
 
-```
+```bash
 pip install openai gtts DALL-E Whisper speechrecognition pydub Pillow tkinter numpy opencv-python
 ```
 
@@ -67,7 +67,7 @@ To use DisplAI, you will need to set up API keys for the OpenAI API (GPT, DALL-E
 
 Once you have your API key, add it to your environment variables:
 
-```
+```bash
 export OPENAI_API_KEY="your_api_key_here"
 ```
 
@@ -76,7 +76,7 @@ export OPENAI_API_KEY="your_api_key_here"
 
 The Viewer class is responsible for displaying images and animations on the screen based on the chatbot's current state. It is a subclass of threading.Thread and can be used as follows:
 
-```
+```python
 viewer = Viewer()
 viewer.change_state("awake")  # or "sleep", "thinking", or "saying"
 viewer.show_image("path/to/image.png")
