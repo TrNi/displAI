@@ -1,4 +1,4 @@
-from lib.viewer import GifViewer
+from lib.viewer import Viewer
 from lib.chatbot import ChatBot
 from lib.audutils import AudioHelper
 import threading
@@ -19,7 +19,7 @@ def update_image(sophia_bot, gif_window):
     gif_window.show_image("image.png")
 
 def main():
-    gif_window = GifViewer()
+    gif_window = Viewer()
     audio_interface = AudioHelper()
     sophia_bot = ChatBot("sophia")
 
