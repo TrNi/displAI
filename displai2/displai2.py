@@ -84,7 +84,6 @@ def disp_occ(q): #display occasionally, based on conversation.
                 imgprmplus = f"Image prompt: " + imgprm
                 imgprmplus = imgprmplus.replace('"', '').replace("'", '')
                 print(imgprmplus)
-                #playaud(imgprm,"imgprompt.mp3")
                 vres = im.create(prompt=imgprm, n=2, size="512x512", response_format="b64_json")
 
                 for id, imdict in enumerate(vres["data"]):
@@ -94,8 +93,6 @@ def disp_occ(q): #display occasionally, based on conversation.
                     cv2.setWindowProperty(f'im{id}', cv2.WND_PROP_TOPMOST, 1)
                 cv2.waitKey(0)
                 cv2.destroyAllWindows()
-
-
 
 if __name__=='__main__':
     q = Q()
