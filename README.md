@@ -1,6 +1,6 @@
-# DisplAI
+# DisplAI - Interactive, multi-media AI Assistant with Stand-alone UI
 
-DisplAI is an interactive, multimedia chatbot that leverages OpenAI's GPT, DALL-E, Whisper, and GTTS to create an engaging and immersive user experience. The chatbot listens to user input, transcribes it, generates appropriate responses, and creates images to visually represent the conversation. This repository contains the source code and an example script for implementing and using the DisplAI chatbot.
+**DisplAI** is an **Interactive, multi-media AI Assistant with Stand-alone UI** that leverages OpenAI's GPT, DALL-E, Whisper, and GTTS to create an engaging and immersive user experience. The chatbot listens to user input, transcribes it, generates appropriate responses, and creates images to visually represent the conversation. This repository contains the source code and an example script for implementing and using the DisplAI chatbot.
 
 ## Library
 
