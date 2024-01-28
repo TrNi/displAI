@@ -4,7 +4,6 @@ from lib.audutils import AudioHelper
 import threading
 import cv2
 
-
 def log(msg):
     print(msg)
 
@@ -43,7 +42,9 @@ def main():
             gif_window.change_state("thinking")
 
             log("Starting trancription")
+
             user_text = audio_interface.transcript(audio)
+
             log(f"Recognized: {user_text}")
 
             if is_valid_msg(user_text):

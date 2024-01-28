@@ -21,8 +21,10 @@ class AudioHelper:
         return audio
 
     def transcript(self, raudio):
+        #print(raudio)
+        rtxt = None
         try:
-            rtxt = self.r.recognize_whisper(raudio, model='small.en')
+            rtxt = self.r.recognize_google(raudio)#(raudio) #self.r.recognize_whisper(raudio, model='small.en')
         except sr.UnknownValueError:
             print("Could not understand audio, please say again.")
 

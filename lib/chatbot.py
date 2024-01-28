@@ -13,7 +13,7 @@ class ConversationDB:
     def _get_embedding(self, msg):
         resp = openai.Embedding.create(
             input=msg,
-            engine="text-similarity-davinci-001")
+            engine="text-embedding-ada-002")#"text-similarity-davinci-001")
         return resp['data'][0]['embedding']
 
     def _similarity(self, emb1, emb2):
