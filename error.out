@@ -1,0 +1,431 @@
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+INFO:root:Num tokens: 38
+INFO:root:Usage: {
+  "completion_tokens": 15,
+  "prompt_tokens": 45,
+  "total_tokens": 60
+}
+INFO:root:Finish reason: stop
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+INFO:root:Num tokens: 65
+INFO:root:Usage: {
+  "completion_tokens": 21,
+  "prompt_tokens": 72,
+  "total_tokens": 93
+}
+INFO:root:Finish reason: stop
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+INFO:root:Num tokens: 97
+INFO:root:Usage: {
+  "completion_tokens": 35,
+  "prompt_tokens": 104,
+  "total_tokens": 139
+}
+INFO:root:Finish reason: stop
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+INFO:root:Num tokens: 144
+INFO:root:Usage: {
+  "completion_tokens": 17,
+  "prompt_tokens": 151,
+  "total_tokens": 168
+}
+INFO:root:Finish reason: stop
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+INFO:root:Num tokens: 174
+INFO:root:Usage: {
+  "completion_tokens": 15,
+  "prompt_tokens": 181,
+  "total_tokens": 196
+}
+INFO:root:Finish reason: stop
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+INFO:root:Num tokens: 203
+INFO:root:Usage: {
+  "completion_tokens": 16,
+  "prompt_tokens": 210,
+  "total_tokens": 226
+}
+INFO:root:Finish reason: stop
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+INFO:root:Num tokens: 229
+INFO:root:Usage: {
+  "completion_tokens": 19,
+  "prompt_tokens": 236,
+  "total_tokens": 255
+}
+INFO:root:Finish reason: stop
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+ALSA lib pcm_dmix.c:999:(snd_pcm_dmix_open) unable to open slave
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+INFO:root:Num tokens: 262
+INFO:root:Usage: {
+  "completion_tokens": 47,
+  "prompt_tokens": 269,
+  "total_tokens": 316
+}
+INFO:root:Finish reason: stop
+Expression 'alsa_snd_pcm_hw_params_set_period_size_near( pcm, hwParams, &alsaPeriodFrames, &dir )' failed in 'src/hostapi/alsa/pa_linux_alsa.c', line: 924
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: CAPTURE 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+D: bluealsa-pcm.c:1309: Getting BlueALSA PCM: PLAYBACK 00:00:00:00:00:00 a2dp
+ALSA lib bluealsa-pcm.c:1313:(_snd_pcm_bluealsa_open) Couldn't get BlueALSA PCM: The name org.bluealsa was not provided by any .service files
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
