@@ -9,7 +9,7 @@ def log(msg):
 
 
 def is_valid_msg(msg):
-    return msg and msg.strip(" ") != "you" and msg != "Thanks for watching!"
+    return msg and msg.strip() != "you" and msg != "Thanks for watching!"
 
 
 def has_keyword_sophia(msg):
@@ -26,20 +26,20 @@ def main():
     gif_window = Viewer()
     audio_interface = AudioHelper()
     sophia_bot = ChatBot("sophia")
-
+    gif_window.change_state("thinking")
     i = 0
     while True:
         try:
 
-            if sophia_bot.is_awake():
-                gif_window.change_state("awake")
-            else:
-                gif_window.change_state("sleep")
+            # if sophia_bot.is_awake():
+            #     gif_window.change_state("awake")
+            # else:
+            #     gif_window.change_state("sleep")
 
             log("Listening...")
             audio = audio_interface.listen()
 
-            gif_window.change_state("thinking")
+            # gif_window.change_state("thinking")
 
             log("Starting trancription")
 
@@ -50,7 +50,7 @@ def main():
             if is_valid_msg(user_text):
                 if has_keyword_sophia(user_text) or sophia_bot.is_awake():
 
-                    sophia_bot.add_user_msg("vanderson", user_text)
+                    sophia_bot.add_user_msg("user", user_text)
 
                     chatgpt_text = sophia_bot.get_and_save_bot_next_msg()
 
@@ -60,7 +60,7 @@ def main():
                             target=update_image, args=(
                                 sophia_bot, gif_window,)).start()
 
-                    gif_window.change_state("saying")
+                    # gif_window.change_state("saying")
                     log(f"Saying: {chatgpt_text}")
 
                     audio_interface.say(chatgpt_text)

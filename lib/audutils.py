@@ -32,14 +32,14 @@ class AudioHelper:
             print("Could not request audio transcription ")
         return rtxt
 
-    def parser_w_detect(raud, keywords):
+    def parser_w_detect(self, raud, keywords):
         try:
             rtxt = self.transcript(raud)
             kw_det = False
             for kw in keywords:
                 if kw.casefold() in rtxt.casefold():
                     kw_det = True  # keyword detected.
-                    rcmd = rtxt.casefold().strip(kw.casefold())  # received command
+                    #rcmd = rtxt.casefold().strip(kw.casefold())  # received command
                     print(f"Keyword detected:{kw}, processing:{rcmd}")
                     break
             if kw_det:

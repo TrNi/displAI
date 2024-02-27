@@ -10,7 +10,7 @@ class Viewer(threading.Thread):
         "gifs/transcripting.gif",
         "gifs/thinking.gif",
         "gifs/speaking.gif",
-        "gifs/starting.gif"]
+        "gifs/startingsmall.gif"]
 
     def __init__(self):
         threading.Thread.__init__(self)
@@ -46,8 +46,8 @@ class Viewer(threading.Thread):
 
         # Resize the image to fullscreen
         img = img.resize(
-            (3 * screen_width // 5,
-             3 * screen_height // 5),
+            (4 * screen_width // 5,
+             4 * screen_height // 5),
             Image.ANTIALIAS)
 
         # Convert the image to a PhotoImage object
@@ -62,16 +62,16 @@ class Viewer(threading.Thread):
         widget.update()
         widget_width = widget.winfo_width()
         widget_height = widget.winfo_height()
-        screen_width = self.tk.winfo_width()
-        screen_height = self.tk.winfo_height()
+        self.screen_width = self.tk.winfo_width()
+        self.screen_height = self.tk.winfo_height()
 
-        x = (screen_width // 2) - (widget_width // 2)
-        y = screen_height - widget_height - padding_y
+        x = (self.screen_width // 2) - (widget_width // 2)
+        y = self.screen_height - widget_height - padding_y
 
-        widget.place(x=x, y=y)
+        widget.place(x=x, y=y) #place()
 
     def load_gif(self):
-        self.gif = Image.open(self.gif_files[self.current_gif])
+        self.gif = Image.open(self.gif_files[self.current_gif])#.resize((self.screen_width // 8,self.screen_width // 8))
         self.show()
 
     def show(self):

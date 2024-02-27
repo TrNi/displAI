@@ -10,7 +10,7 @@ completion:
 chatCompletion:
   encoding: cl100k_base
   kwargs:
-    model: gpt-3.5-turbo
+    model: gpt-4  #gpt-3.5-turbo
     temperature: 0.8
     max_tokens: 1000
     n: 1

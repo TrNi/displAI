@@ -52,7 +52,7 @@ def converse(q):
         else:
             gptprm=f"You are an intelligent chatbot named {botname}, conversing with a user named {usrname}. Understand the past conversation and generate your next one-line response in less than 20 words. Past conversation: {cnvr}"
             gptres = ow.chat_completion(gptprm)
-        gptres = gptres.strip("Jolly:").strip("Jolly").strip("jolly")
+        #gptres = gptres.strip("Jolly:").strip("Jolly").strip("jolly")
         playaud(gptres)
         cnvr = "" if cnvr is None else cnvr
         cnvr = cnvr + f'\n Jolly: {gptres}'
