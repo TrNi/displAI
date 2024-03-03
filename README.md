@@ -43,41 +43,30 @@ python sophia.py
 and say: ```hi sophia, how are you?```
 
 ## Getting Started
-### Prerequisites
-
-To use DisplAI, you will need the following dependencies:
-
-```
-    Python 3.7 or newer
-    OpenAI Python library
-    GTTS (Google Text-to-Speech)
-    DALL-E
-    Whisper
-    SpeechRecognition
-    Pydub
-    Pillow (PIL)
-    Tkinter
-    Numpy
-    OpenCV (cv2)
-```
-
 ### Installation
 
-To install the required dependencies, run the following command:
+To use DisplAI, you will need to install dependencies listed in requirements.txt:
+```pip install -r requirements.txt```
 
-```bash
-pip install openai gtts DALL-E Whisper speechrecognition pydub Pillow tkinter numpy opencv-python
-```
+### Setup API Keys
 
-### Setup
+To use DisplAI you will need OpenAI API key (for GPT, DALL-E, and Whisper). Follow the instructions on the OpenAI API documentation to obtain your API key.
 
-To use DisplAI, you will need to set up API keys for the OpenAI API (GPT, DALL-E, and Whisper). Follow the instructions on the OpenAI API documentation to obtain your API key.
-
-Once you have your API key, add it to your environment variables:
+Once you have your API key, add it to your environment variables. Linux example:
 
 ```bash
 export OPENAI_API_KEY="your_api_key_here"
 ```
+
+To use DisplAI with supported actions (weather, music, news) you will need 4 API keys:
+NEWS_API_KEY: from https://newsapi.org
+OWM_API_KEY: from https://api.openweathermap.org
+SPOT_CLIENT_ID: log in at https://developer.spotify.com/, create an app, go to settings, add your email id as authorised user.  
+SPOT_CLIENT_SECRET: copy client id and client secret from Spotify, save them as env. variables. 
+
+Note: first time running action script, Spotify will prompt user to login on their default we browser, and paste the browser URL on to cmd / terminal.
+
+
 
 ## Documentation
 ### Viewer Class
