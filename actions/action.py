@@ -18,8 +18,8 @@ def action(actype, acargs):
         fullurl = f"{baseurl}q={city}&appid={owm_api_key}&units=imperial"
         apires = requests.get(fullurl)
         wthr = apires.json()
-        with open("dump.json","w+") as f:
-            f.write(json.dumps(wthr, indent=4))
+        # with open("dump.json","w+") as f:
+        #     f.write(json.dumps(wthr, indent=4))
         if wthr['cod']=='404':
             print(f"This city {city} is not found in weather API.")
             return None
