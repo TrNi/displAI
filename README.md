@@ -2,15 +2,19 @@
 
 **DisplAI** is an **Interactive Multimedia AI Assistant with Stand-alone UI** that leverages OpenAI's GPT, DALL-E, Whisper, and GTTS to create an engaging and immersive user experience. The chatbot listens to user input, transcribes it, generates appropriate responses, and creates images to visually represent the conversation. This repository contains the source code and an example script for implementing and using the DisplAI chatbot.
 
+> **Disclaimer:**
+> User discretion recommended. As with any generative AI application, this AI Assistant may produce factually incorrect / misleading content. Do not use content generated from this software as facts or reality. 
+
 ## Library
 
 The DisplAI library consists of several modules:
-
-    lib.viewer: This module provides the Viewer class for displaying images and animations based on the current state of the chatbot (e.g., awake, asleep, thinking, or speaking).
-    lib.chatbot: This module contains the ChatBot class, which manages the chatbot's core functionalities such as handling conversation history, generating responses using GPT, and creating images using DALL-E.
-    lib.audutils: This module includes the AudioHelper class, which handles audio input and output using Whisper for speech recognition and GTTS for text-to-speech.
-    lib.imgutils: This module provides utility functions for working with images, such as converting images from strings to image objects.
-    lib.OAIWrapper: This module contains the OAIWrapper class, which wraps the OpenAI API for GPT, DALL-E, and Whisper.
+	
+    lib.viewer: the Viewer class for displaying images and animations based on the current state of the chatbot (e.g., awake, asleep, thinking, or speaking).
+    lib.chatbot: the ChatBot class - manages the chatbot's core functionalities such as handling conversation history, generating responses using GPT, and creating images using DALL-E.
+    lib.audutils: the AudioHelper class - handles audio input and output using Whisper for speech recognition and GTTS for text-to-speech.
+    lib.imgutils: utility functions for working with images, such as converting images from strings to image objects.
+    lib.OAIWrapper: the OAIWrapper class - wraps the OpenAI API for GPT, DALL-E, and Whisper.
+    lib.action: the action function - provides news, weather or music based on user input.
 
 ## Example
 
@@ -115,4 +119,4 @@ We welcome contributions to the DisplAI project! If you would like to contribute
 Please make sure to follow the project's coding style and guidelines, and include tests and documentation for any new features or changes.
 ## License
 
-DisplAI is released under the MIT License. See the LICENSE file for more information.
+DisplAI is released under the non-commercial CC BY-NC 4.0: International License. See the LICENSE file for more information.

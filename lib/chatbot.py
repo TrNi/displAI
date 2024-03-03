@@ -4,7 +4,7 @@ import openai
 import time
 from openai import Image as im
 import numpy as np
-from actions.action import action
+from lib.action import action
 
 class ConversationDB:
     history_embeddings = []
