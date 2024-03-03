@@ -56,9 +56,10 @@ class ChatBot:
             imgprmplus = f"Image prompt: " + imgprm
             imgprmplus = imgprmplus.replace('"', '').replace("'", '')
             vres = im.create(
+                model="dall-e-3",
                 prompt=imgprm,
                 n=1,
-                size="256x256",
+                size="1024x1024",
                 response_format="b64_json")
             return strtoimg(vres["data"][0]["b64_json"])
 

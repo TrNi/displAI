@@ -3,7 +3,8 @@ import gtts
 from pydub import AudioSegment
 from pydub.playback import play
 import os
-
+from io import BytesIO
+import pygame
 
 class AudioHelper:
     def __init__(self):
@@ -24,7 +25,7 @@ class AudioHelper:
         #print(raudio)
         rtxt = None
         try:
-            rtxt = self.r.recognize_google(raudio)#(raudio) #self.r.recognize_whisper(raudio, model='small.en')
+            rtxt = self.r.recognize_google(raudio)
         except sr.UnknownValueError:
             print("Could not understand audio, please say again.")
 
@@ -55,8 +56,14 @@ class AudioHelper:
 
     def say(self, txt, lang="en", accent="us", path=''):
         aud = gtts.gTTS(txt, lang=lang, tld=accent)
-        audpath = os.path.join(
-            os.path.dirname(__file__),
-            'tempaud.mp3' if path == '' else path)
-        aud.save(audpath)
-        play(AudioSegment.from_file(audpath, format="mp3"))
+
+        fp = BytesIO()
+        aud.write_to_fp(fp)
+        fp.seek(0)
+
+        pygame.init()
+        pygame.mixer.init()
+        pygame.mixer.music.load(fp)
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy():
+            pygame.time.Clock().tick(10)  

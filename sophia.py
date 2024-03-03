@@ -11,16 +11,12 @@ def log(msg):
 def is_valid_msg(msg):
     return msg and msg.strip() != "you" and msg != "Thanks for watching!"
 
-
 def has_keyword_sophia(msg):
     return "sophia" in msg.lower() or "sofia" in msg.lower()
 
-
 def update_image(sophia_bot, gif_window):
     image = sophia_bot.gen_image_from_conversation()
-    cv2.imwrite("image.png", image)
-    gif_window.show_image("image.png")
-
+    gif_window.show_image(image)
 
 def main():
     gif_window = Viewer()

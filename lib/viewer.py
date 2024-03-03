@@ -38,7 +38,7 @@ class Viewer(threading.Thread):
 
     def show_image(self, image_path):
         # Load the image
-        img = Image.open(image_path)
+        img = image_path#Image.open(image_path)
 
         # Get the screen dimensions
         screen_width = self.tk.winfo_screenwidth()
