@@ -46,9 +46,8 @@ class Viewer(threading.Thread):
 
         # Resize the image to fullscreen
         img = img.resize(
-            (4 * screen_width // 5,
-             4 * screen_height // 5),
-            Image.ANTIALIAS)
+            (5 * screen_width // 5,
+             5 * screen_height // 5))#,Image.ANTIALIAS)
 
         # Convert the image to a PhotoImage object
         photo_image = ImageTk.PhotoImage(img)
@@ -65,8 +64,8 @@ class Viewer(threading.Thread):
         self.screen_width = self.tk.winfo_width()
         self.screen_height = self.tk.winfo_height()
 
-        x = (self.screen_width // 2) - (widget_width // 2)
-        y = self.screen_height - widget_height - padding_y
+        x = 0#(self.screen_width // 2) - (widget_width // 2)
+        y = 0#self.screen_height - widget_height - padding_y
 
         widget.place(x=x, y=y) #place()
 

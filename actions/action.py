@@ -83,12 +83,15 @@ def action(actype, acargs):
             player = Instance.media_player_new()
             Media = Instance.media_new(stream_url)#stream_url)
             #Media.get_mrl()
+            if Media is None:
+                print("Failed to create media instance")
+                exit(1)
             player.set_media(Media)
             player.play()
             player.audio_set_volume(100)
             time.sleep(3)
             duration = player.get_length() / 1000
-            #print(duration)
+            print("Music Duration:",duration)
             time.sleep(duration)
     
             while True:
@@ -98,7 +101,8 @@ def action(actype, acargs):
                     Media.release()
                     break
             return True
-        except:
+        except Exception as e:
+            print(f'Error in sound playing: {e}.')
             return False
 
 

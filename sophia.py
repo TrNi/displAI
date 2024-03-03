@@ -54,11 +54,11 @@ def main():
 
                     chatgpt_text = sophia_bot.get_and_save_bot_next_msg()
 
-                    if i % 2 == 0:
-                        log("Generating new image")
-                        threading.Thread(
-                            target=update_image, args=(
-                                sophia_bot, gif_window,)).start()
+                    #if i % 2 == 0:
+                    #log("Generating new image")
+                    threading.Thread(
+                       target=update_image, args=(
+                       sophia_bot, gif_window,)).start()
 
                     # gif_window.change_state("saying")
                     log(f"Saying: {chatgpt_text}")

@@ -154,7 +154,7 @@ class ChatBot:
                             prompt=f"Make a compact summary report from this  list of news events, like a radio news anchor: {newsevents}.")
                     elif actid==2:
                         playedmusic = action(act[0], act[1])
-                        gptresp2 = f'Played {act[1]}.'
+                        gptresp2 = f'Played {act[1]}.' if playedmusic==True else 'Could not play music, please consider different search terms.'
                 
         self.conversation += [self.bot_name + ": " + gptresp2]
         self._update_history()
