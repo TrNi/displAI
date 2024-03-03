@@ -129,3 +129,12 @@ dmypy.json
 
 # MP3 files
 .mp3
+
+#json logs
+.json
+
+#console outputs
+.out
+
+#access
+.cache
