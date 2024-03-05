@@ -10,7 +10,8 @@ This repository contains the source code and an example script for implementing 
 > Use this AI Assistant purely for entertainment and fun purposes. 
 > Do not use content generated from this software as facts or reality.
 
-> Demo (YouTube): [![Watch Demo on YouTube](https://img.youtube.com/vi/4PobWQxplZ8/maxresdefault.jpg)](https://youtu.be/4PobWQxplZ8?t=24)
+**Demo (YouTube):** 
+[![Watch Demo on YouTube](https://img.youtube.com/vi/4PobWQxplZ8/maxresdefault.jpg)](https://youtu.be/4PobWQxplZ8?t=24)
 
 
 ## Library
