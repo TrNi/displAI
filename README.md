@@ -2,7 +2,7 @@
 
 **DisplAI** is an **Interactive Multimedia AI Assistant with Stand-alone UI** that leverages OpenAI GPT, DALL-E, Google GTTS, Spotify, OpenWeatherMap, NewsAPI to create an immersive and engaging user experience. 
 
-The chatbot listens to user input, transcribes it, gets activated on specific keywords, can talk with user, play music, share real-time weather forecast or news and generate artistic images based on conversations. 
+The AI assistant DisplAI listens to user input, transcribes it, gets activated on specific keywords, can talk with user, play music, share real-time weather forecast or news and generate artistic images based on conversations. 
 This repository contains the source code and an example script for implementing and using the DisplAI Assistant.
 
 **Disclaimer:**
@@ -119,4 +119,4 @@ Please make sure to follow the project's coding style and guidelines, and includ
 
 ## License
 
-DisplAI is released under the non-commercial [CC BY-NC 4.0: International License](https://creativecommons.org/licenses/by-nc/4.0/). See the LICENSE file for more information.
+DisplAI is released under the **non-commercial [CC BY-NC 4.0: International License]**(https://creativecommons.org/licenses/by-nc/4.0/). See the LICENSE file for more information.
